@@ -2,13 +2,14 @@ http in go lang
 
 
 #1. basic GET method
-
+```go
 resp, err := http.Get("http://example.com/")
 if err != nil {
 	// handle error
 }
 defer resp.Body.Close()
 body, err := ioutil.ReadAll(resp.Body)
+```
 
 **Attention: we must close the file handler before exit**
 
@@ -18,4 +19,4 @@ body, err := ioutil.ReadAll(resp.Body)
 
 #4. POST with binary data
 
-#5.
+#5. http server
