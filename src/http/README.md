@@ -19,6 +19,18 @@ body, err := ioutil.ReadAll(resp.Body)
 
 #4. POST with binary data
 
+```go
+func (c *Client) Post(url string, bodyType string, body io.Reader) (resp *Response, err error)
+
+func (c *Client) PostForm(url string, data url.Values) (resp *Response, err error)
+
+// data's keys and values urlencoded as the request body.
+// type url.Values map[string][]string
+
+
+```
+
+
 #5. http server
 
 ##5.1. basic server without TLS(HTTPS)
